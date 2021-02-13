@@ -55,7 +55,7 @@ term.setBackgroundColor(colors.blue)
 
 local function drawFrontend()
     osapi.printCentered( math.floor(h/2) - 3, "")
-    osapi.printCentered( math.floor(h/2) - 2, "Uninstall Menu" )
+    osapi.printCentered( math.floor(h/2) - 2, "Install Menu" )
     osapi.printCentered( math.floor(h/2) - 1, "")
     osapi.printCentered( math.floor(h/2) + 0, ((nOption == 1) and "[ Install On Disk  ]") or "Install On Disk " )
     osapi.printCentered( math.floor(h/2) + 1, ((nOption == 2) and "[ Back             ]") or "Back            " )
@@ -93,6 +93,8 @@ term.clear()
 if nOption == 1 then
     diskinstall()
     shell.run("os/install.lua")
-else
+elseif nOption == 2 then
     shell.run("os/programs.lua")
+else
+    shell.run("os/install.lua")
 end

@@ -65,13 +65,19 @@ while true do
 end
 term.clear()
 
+local hFile = fs.open("os/.user.lua", "r")
+local user = hFile.readLine()
+hFile.close()
+
 --Conditions
 if nOption  == 1 then
     shell.run("os/command.lua")
 elseif nOption == 2 then
     shell.run("os/programs.lua")
-elseif nOption == 3 then
+elseif nOption == 3 and user == 'root' then
     shell.run("os/accountmanager.lua")
-else
+elseif nOption == 4 then
     os.shutdown()
+else
+    shell.run("os/main.lua")
 end

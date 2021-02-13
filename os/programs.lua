@@ -76,6 +76,10 @@ while true do
 end
 term.clear()
 
+local hFile = fs.open("os/.user.lua", "r")
+local user = hFile.readLine()
+hFile.close()
+
 --Conditions
 if nOption  == 1 then
     shell.run("os/main.lua")
@@ -85,6 +89,8 @@ elseif nOption == 3 then
     os.shutdown()
 elseif nOption == 4 then
     shell.run("os/install.lua")
-else
+elseif nOption == 5 and user == 'root' then
     shell.run("os/uninstall.lua")
+else
+    shell.run("os/programs.lua")
 end

@@ -77,6 +77,8 @@ if nOption == 1 then
 elseif nOption == 2 then
     uninstall()
     os.reboot()
-else
+elseif nOption == 3 then
     shell.run("os/programs.lua")
+else
+    shell.run("os/uninstall.lua")
 end
