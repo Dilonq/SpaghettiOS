@@ -16,4 +16,4 @@ while true do
     end
 end
 
-shell.run("os/main.lua")
+os.run({},"os/main.lua")

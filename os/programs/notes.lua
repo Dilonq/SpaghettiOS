@@ -67,13 +67,13 @@ term.clear()
 
 --Conditions
 if nOption == 1 then
-    shell.run("os/programs/noteslua/listnotes.lua")
+    os.run({},"os/programs/noteslua/listnotes.lua")
 elseif nOption == 2 then
-    shell.run("os/programs/noteslua/editnotes.lua")
+    os.run({},"os/programs/noteslua/editnotes.lua")
 elseif nOption == 3 then
-    shell.run("os/programs/noteslua/readnotes.lua")
+    os.run({},"os/programs/noteslua/readnotes.lua")
 elseif nOption == 4 then
-    shell.run("os/programs.lua")
+    os.run({},"os/programs.lua")
 else
-    shell.run("os/programs/notes.lua")
+    os.run({},"os/programs/notes.lua")
 end

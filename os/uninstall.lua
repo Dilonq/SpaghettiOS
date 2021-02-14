@@ -73,12 +73,12 @@ term.clear()
 --Conditions
 if nOption == 1 then
     fs.delete('startup.lua')
-    shell.run("os/main.lua")
+    os.run({},"os/main.lua")
 elseif nOption == 2 then
     uninstall()
     os.reboot()
 elseif nOption == 3 then
-    shell.run("os/programs.lua")
+    os.run({},"os/programs.lua")
 else
-    shell.run("os/uninstall.lua")
+    os.run({},"os/uninstall.lua")
 end

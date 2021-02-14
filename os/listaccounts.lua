@@ -13,4 +13,4 @@ for _, file in ipairs(fs.list("os/users/")) do
 end
 
 os.pullEvent("key")
-shell.run("os/accountmanager.lua")
+os.run({},"os/accountmanager.lua")

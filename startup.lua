@@ -64,7 +64,7 @@ term.clear()
  
 --Conditions
 if nOption == 1 then
-    shell.run("os/login.lua")
+    os.run({},"os/login.lua")
 else
     os.shutdown()
 end

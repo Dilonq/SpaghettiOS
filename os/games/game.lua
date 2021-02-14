@@ -457,7 +457,7 @@ if doUpdateGame then
 		return
 	else
 		sleep(0.2)
-		shell.run( shell.getRunningProgram(), table.concat({...}, " "):gsub("--update", "") )
+		os.run({}, shell.getRunningProgram(), table.concat({...}, " "):gsub("--update", "") )
 		return
 	end
 end
@@ -2133,4 +2133,4 @@ else
 	end
 end
 
-shell.run('os/games.lua')
+os.run({},'os/games.lua')

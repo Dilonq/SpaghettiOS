@@ -71,13 +71,13 @@ hFile.close()
 
 --Conditions
 if nOption  == 1 then
-    shell.run("os/command.lua")
+    os.run({},"os/command.lua")
 elseif nOption == 2 then
-    shell.run("os/programs.lua")
+    os.run({},"os/programs.lua")
 elseif nOption == 3 and user == 'root' then
-    shell.run("os/accountmanager.lua")
+    os.run({},"os/accountmanager.lua")
 elseif nOption == 4 then
     os.shutdown()
 else
-    shell.run("os/main.lua")
+    os.run({},"os/main.lua")
 end

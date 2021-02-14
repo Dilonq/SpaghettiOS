@@ -73,9 +73,9 @@ hFile.close()
 
 --Conditions
 if nOption  == 1 then
-    shell.run("os/programs.lua")
+    os.run({},"os/programs.lua")
 elseif nOption == 2 then
-    shell.run("os/games/game.lua")
+    os.run({},"os/games/game.lua")
 else
-    shell.run("os/games.lua")
+    os.run({},"os/games.lua")
 end

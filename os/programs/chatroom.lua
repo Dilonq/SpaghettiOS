@@ -66,7 +66,7 @@ local function main()
     else
         print("Modem Not Found, Exiting...")
         sleep(1)
-        shell.run('/os/programs.lua')
+        os.run({},'/os/programs.lua')
     end
 end
 

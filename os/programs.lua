@@ -28,7 +28,7 @@ local function drawMenu()
     elseif nOption == 4 then
         term.write("Games")
     elseif nOption == 5 then
-        term.write("Shutdown")
+        term.write("Run")
     elseif nOption == 6 then
         term.write("Install")
     elseif nOption == 7 then
@@ -49,7 +49,7 @@ local function drawFrontend()
     printCentered( math.floor(h/2) + 1, ((nOption == 2) and "[ Chatroom ]") or "Chatroom " )
     printCentered( math.floor(h/2) + 2, ((nOption == 3) and "[ Notes    ]") or "Notes    " )
     printCentered( math.floor(h/2) + 3, ((nOption == 4) and "[ Games    ]") or "Games    " )
-    printCentered( math.floor(h/2) + 4, ((nOption == 5) and "[ Shutdown ]") or "Shutdown " )
+    printCentered( math.floor(h/2) + 4, ((nOption == 5) and "[ Run      ]") or "Run      " )
     printCentered( math.floor(h/2) + 5, ((nOption == 6) and "[ Install  ]") or "Install  " )
     printCentered( math.floor(h/2) + 6, ((nOption == 7) and "[ Uninstall]") or "Uninstall" )
     printCentered( math.floor(h/2) + 7, "")
@@ -88,19 +88,19 @@ hFile.close()
 
 --Conditions
 if nOption  == 1 then
-    shell.run("os/main.lua")
+    os.run({},"os/main.lua")
 elseif nOption == 2 then
-    shell.run("os/programs/chatroom.lua")
+    os.run({},"os/programs/chatroom.lua")
 elseif nOption == 3 then
-    shell.run("os/programs/notes.lua")
+    os.run({},"os/programs/notes.lua")
 elseif nOption == 4 then
-    shell.run("os/games.lua")
+    os.run({},"os/games.lua")
 elseif nOption == 5 then
-    os.shutdown()
+    os.run({},"os/programs/run.lua")
 elseif nOption == 6 then
-    shell.run("os/install.lua")
+    os.run({},"os/install.lua")
 elseif nOption == 7 and user == 'root' then
-    shell.run("os/uninstall.lua")
+    os.run({},"os/uninstall.lua")
 else
-    shell.run("os/programs.lua")
+    os.run({},"os/programs.lua")
 end

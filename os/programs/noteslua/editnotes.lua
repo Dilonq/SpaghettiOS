@@ -24,4 +24,4 @@ else
 end
 
 os.pullEvent("key")
-shell.run("os/programs/notes.lua")
+os.run({},"os/programs/notes.lua")

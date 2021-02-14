@@ -71,7 +71,7 @@ while not loggedIn do
         term.setTextColor(colors.white)
         drawFrontend()
     end
-    sleep(1)
+    os.pullEvent("key")
 end
 
-shell.run("os/main.lua")
+os.run({},"os/main.lua")

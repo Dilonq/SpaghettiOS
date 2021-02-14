@@ -96,9 +96,9 @@ term.clear()
 --Conditions
 if nOption == 1 then
     diskinstall()
-    shell.run("os/install.lua")
+    os.run({},"os/install.lua")
 elseif nOption == 2 then
-    shell.run("os/programs.lua")
+    os.run({},"os/programs.lua")
 else
-    shell.run("os/install.lua")
+    os.run({},"os/install.lua")
 end

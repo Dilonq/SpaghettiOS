@@ -70,15 +70,15 @@ term.clear()
 
 --Conditions
 if nOption == 1 then
-    shell.run("os/listaccounts.lua")
+    os.run({},"os/listaccounts.lua")
 elseif nOption == 2 then
-    shell.run("os/changepasswords.lua")
+    os.run({},"os/changepasswords.lua")
 elseif nOption == 3 then
-    shell.run("os/createaccount.lua")
+    os.run({},"os/createaccount.lua")
 elseif nOption == 4 then
-    shell.run("os/deleteaccount.lua")
+    os.run({},"os/deleteaccount.lua")
 elseif nOption == 5 then
-    shell.run("os/main.lua")
+    os.run({},"os/main.lua")
 else
-    shell.run("os/accountmanager.lua")
+    os.run({},"os/accountmanager.lua")
 end
